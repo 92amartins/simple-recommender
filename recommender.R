@@ -2,8 +2,8 @@ library(dplyr)
 
 source("jaccard.R")
 
-movies <- read.csv("ml-latest-small/movies.csv", stringsAsFactors = FALSE)
-tags   <- read.csv("ml-latest-small/tags.csv", stringsAsFactors = FALSE)
+movies <- read.csv("ml-20m/movies.csv", stringsAsFactors = FALSE)
+tags   <- read.csv("ml-20m/tags.csv", stringsAsFactors = FALSE)
 movies_tags <- inner_join(movies, tags, by = "movieId")
 
 id <- 1
